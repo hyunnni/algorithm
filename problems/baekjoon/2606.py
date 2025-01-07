@@ -1,28 +1,30 @@
 import sys
 
+# 입력 처리
 com = int(sys.stdin.readline())
-match = int(sys.stdin.readline())
+connections = int(sys.stdin.readline())
 
-data = []
+# 그래프 초기화
 graph = [[]for _ in range(com+1)]
 
-for _ in range(match):
-    data.append(list(map(int, sys.stdin.readline().split())))
+# 그래프 구성
+for _ in range(connections):
+    a,b = map(int, sys.stdin.readline().split)
+    graph[a].append(b)
+    graph[b].append(a)
 
-for i in data:
-    if i[1] not in graph[i[0]]:
-        graph[i[0]].append(i[1])
-    if i[0] not in graph[i[1]]:
-        graph[i[1]].append(i[0])
-
-    
+# 방분 배열 초기화 
 visited = [False]*(com+1)
 
+# DFS
 def dfs(graph, v, visited):
-    visited[v] = True;
+    visited[v] = True
     for i in graph[v]:
         if not visited[i]:
             dfs(graph, i, visited)
-    
+
+# DFS 실행    
 dfs(graph,1, visited)
+
+# 1번 컴퓨터 제외한 감염된 컴퓨터 수 출력
 print(visited.count(True)-1)
