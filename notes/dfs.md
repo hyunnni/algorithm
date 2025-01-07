@@ -43,17 +43,18 @@ def dfs(graph, v, visited):
     for i in graph[v]:
         if not visited[i]:
             dfs(graph, i, visited)
-      
+        
 graph = [
     [1, 5],
     [2, 5],
     [3, 4],
+    [],
     [3],
     [6],
     [1]
 ]
 
-visited = [False]*6
+visited = [False]*7
 
 dfs(graph, 0, visited)
 ```
