@@ -4,7 +4,9 @@
 
 ## BFS란?
 
-> 너비 우선 탐색으로, 루트 노드를 시작으로 가까운 노드부터 탐색하는 방법
+> 너비 우선 탐색으로, 루트 노드를 시작으로 **가까운 노드부터 탐색**하는 방법
+
+`거리순 탐색` 이라는 특징 때문에 가중치가 없는 그래프에서 출발 노드에서 다른 모든 노드까지의 **최단 거리**를 구하는 데 유용하다.
 
 ![image](https://github.com/user-attachments/assets/09ff50a9-185e-48b0-9cb8-59a5dd35f10c)
 
@@ -22,7 +24,7 @@
 <br>
 <br>
 
-## BFS의 구현 
+## BFS의 구현
 
 ![image](https://github.com/user-attachments/assets/95ddad56-ee3d-4ce8-85c0-ed2b046a0c48)
 
@@ -33,8 +35,8 @@
 <br>
 <br>
 
-
 #### 구현 코드 (python)
+
 ```python
 from collections import deque
 
@@ -70,9 +72,10 @@ bfs(graph, 0, visited)
 
 ```
 
-
 #### OUTPUT
-각 과정에서의 큐 상태와 방문 노드를 출력한 결과 
+
+각 과정에서의 큐 상태와 방문 노드를 출력한 결과
+
 ```
 Current queue: [0]
 [Visited: 0]
@@ -87,3 +90,10 @@ Current queue: [4]
 Current queue: [5]
 [Visited: 5]
 ```
+<br>
+
+## 참고자료
+
+- https://nerohoop.gitbooks.io/cs-knowledge/content/graph/graph-traversal/breadth-first-traversal.html 
+
+- https://medium.com/@practicetracker4ever/breadth-first-search-on-graph-f86004f3bf38
