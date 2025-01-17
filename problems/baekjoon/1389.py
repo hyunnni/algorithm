@@ -12,22 +12,22 @@ for _ in range(m):
 
 # BFS 정의
 def bacon_game_bfs(p):
-    bacon_list = [0] * n
-    visited = [False] * n
-    queue = deque([(p, 0)])
-    visited[p] = True
+    bacon_list = [0] * n    # 각 사용자별 단계 정리
+    visited = [False] * n   # 방문 여부
+    queue = deque([(p, 0)]) # (현재 사용자, 현재 거리)
+    visited[p] = True   # 방문 처리
     
     while queue:
         cur, dist = queue.popleft()
         for friend in relationship[cur]:
             if not visited[friend]:
-                visited[friend] = True
-                bacon_list[friend] = dist + 1
+                visited[friend] = True  
+                bacon_list[friend] = dist + 1   # 거리 갱신
                 queue.append((friend, dist + 1))
 
     return sum(bacon_list)
 
-# main
+# main: 모든 사용자에 대해 BFS 실행
 result_list = []
 for p in range (n):
     result_list.append((p+1, bacon_game_bfs(p)))   # (user, bacon_result)
