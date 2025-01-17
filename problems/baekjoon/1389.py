@@ -4,7 +4,8 @@ import sys
 # 입력
 n,m = map(int, sys.stdin.readline().split())
 relationship = [[]for _ in range(n)]
-for i in range(m):
+
+for _ in range(m):
     a,b = map(int, sys.stdin.readline().split())
     relationship[a-1].append(b-1)
     relationship[b-1].append(a-1)
@@ -31,5 +32,6 @@ result_list = []
 for p in range (n):
     result_list.append((p+1, bacon_game_bfs(p)))   # (user, bacon_result)
 
-result = min(result_list, key=lambda x : (x[1], x[0]))
+# 베이컨 값이 가장 작은 사용자 찾기
+result = min(result_list, key=lambda x : (x[1], x[0]))  # 값 우선 기준 정렬, 값이 같으면 사용자 번호 기준 정렬
 print(result[0])
