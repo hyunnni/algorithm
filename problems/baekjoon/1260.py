@@ -1,6 +1,5 @@
 import sys
 from collections import deque
-sys.setrecursionlimit(10000)
 
 n, m, v  = map(int, sys.stdin.readline().split())
 graph = [[] for _ in range(n + 1)]
@@ -13,35 +12,40 @@ for _ in range(m):
 for i in range(n+1):
     graph[i].sort()
 
-visited_dfs = [False] * (n + 1)
-dfs_result_list = []
+def dfs(start, graph, visited):
+    result = []
+    stack = [start]
+    visited[start] = True
 
-def dfs(n):
-    visited_dfs[n] = True
-    dfs_result_list.append(n)
+    while stack:
+        node = stack.pop()
+        result.append(node)
+        for neighbor in reversed(graph[node]):
+            if not visited[neighbor]:
+                visited[neighbor] = True
+                stack.append(neighbor)
+    
+    return result
 
-    for neighbor in graph[n]:
-        if not visited_dfs[neighbor]:
-            dfs(neighbor)
-
-visited_bfs = [False] * (n + 1)
-bfs_result_list = []
-
-def bfs():
-    queue = deque([v])
-    visited_bfs[v] = True
-    bfs_result_list.append(v)
+def bfs(start, graph, visited):
+    result = []
+    queue = deque([start])
     
     while queue:
-        n = queue.popleft()
-        for neighbor in graph[n]:
-            if not visited_bfs[neighbor]:
+        node = queue.popleft()
+        result.append(node)
+        for neighbor in graph[node]:
+            if not visited[neighbor]:
+                visited[neighbor] = True
                 queue.append(neighbor)
-                visited_bfs[neighbor] = True
-                bfs_result_list.append(neighbor)
     
-dfs(v)
-bfs()
+    return result
+
+visited_dfs = [False] * (n + 1)
+visited_bfs = [False] * (n + 1)
+
+dfs_result_list = dfs(v, graph, visited_dfs)
+bfs_result_list = bfs(v, graph, visited_bfs)
 
 print(*dfs_result_list)
 print(*bfs_result_list)
