@@ -1,39 +1,38 @@
 import sys
 from collections import deque
 
-n, m, v  = map(int, sys.stdin.readline().split())
+n, m, v = map(int, sys.stdin.readline().split())
 graph = [[] for _ in range(n + 1)]
 
+# 간선 정보, 양방향 그래프 생성
 for _ in range(m):
     a, b = map(int, sys.stdin.readline().split())
     graph[a].append(b)
     graph[b].append(a)
 
-for i in range(n+1):
+# 노드 오름차순 정렬 -> 작은 번호부터 방문 보장
+for i in range(n + 1):
     graph[i].sort()
 
-def dfs(start, graph, visited):
-    result = []
-    stack = [start]
+# DFS
+def dfs(start):
     visited[start] = True
+    result.append(start)
 
-    while stack:
-        node = stack.pop()
-        result.append(node)
-        for neighbor in reversed(graph[node]):
-            if not visited[neighbor]:
-                visited[neighbor] = True
-                stack.append(neighbor)
-    
-    return result
+    for neighbor in graph[start]:
+        if not visited[neighbor]:
+            dfs(neighbor)
 
-def bfs(start, graph, visited):
-    result = []
+# BFS 
+def bfs(start):
     queue = deque([start])
-    
+    visited[start] = True
+    result = []
+
     while queue:
         node = queue.popleft()
         result.append(node)
+
         for neighbor in graph[node]:
             if not visited[neighbor]:
                 visited[neighbor] = True
@@ -41,11 +40,12 @@ def bfs(start, graph, visited):
     
     return result
 
-visited_dfs = [False] * (n + 1)
-visited_bfs = [False] * (n + 1)
+# DFS 실행
+visited = [False] * (n + 1)
+result = []
+dfs(v)
+print(*result)
 
-dfs_result_list = dfs(v, graph, visited_dfs)
-bfs_result_list = bfs(v, graph, visited_bfs)
-
-print(*dfs_result_list)
-print(*bfs_result_list)
+# BFS 실행
+visited = [False] * (n + 1)
+print(*bfs(v))
