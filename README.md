@@ -15,7 +15,8 @@
 | 백준 | 2178 | [미로 탐색](https://www.acmicpc.net/problem/2178) | 그래프 탐색 (BFS) | [📂 코드](problems/baekjoon/2178.py) |  |
 | 백준 | 2206 | [벽 부수고 이동하기](https://www.acmicpc.net/problem/2206) | 그래프 탐색 (BFS) | [📂 코드](problems/baekjoon/2206.py) |  |
 | 백준 | 2163 | [초콜릿 자르기](https://www.acmicpc.net/problem/2163) | 그리디 & 수학 | [📂 코드](problems/baekjoon/2163.py) |  |
-| 백준 | 2309 | [일곱 난쟁이](https://www.acmicpc.net/problem/2309) | 완전 탐색 & 조합 | [📂 코드](problems/baekjoon/2309.py) | |
+| 백준 | 2309 | [일곱 난쟁이](https://www.acmicpc.net/problem/2309) | 완전 탐색 & 정렬 | [📂 코드](problems/baekjoon/2309.cpp) | |
+| 백준 | 2468 | [안전 영역](https://www.acmicpc.net/problem/2468) | 그래프 탐색 (BFS) | [📂 코드](problems/baekjoon/2468.py) | |
 
 ---
 
