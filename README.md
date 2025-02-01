@@ -4,48 +4,21 @@
 
 ---
 
-## 🚀 1. 그래프 탐색 (BFS / DFS)
-| 플랫폼 | 문제 번호 | 문제 이름 | 풀이 코드 | 풀이 과정 |
-|--------|---------|----------|------------|------------|
-|백준|1012|[유기농 배추](https://www.acmicpc.net/problem/1012)|[📂 BFS 풀이](problems/baekjoon/1012_bfs.py) / [📂 DFS 풀이](baekjoon/1012_dfs)||
-|백준|1260|[DFS와 BFS](https://www.acmicpc.net/problem/1260)|[📂 코드](problems/baekjoon/1260.py)||
-|백준|1261|[알고스팟](https://www.acmicpc.net/problem/1261)|[📂 코드](problems/baekjoon/1261.py) ||
-|백준|1389|[케빈 베이컨의 6단계 법칙](https://www.acmicpc.net/problem/1389)|[📂 코드](problems/baekjoon/1389.py) ||
-|백준|1697|[숨바꼭질](https://www.acmicpc.net/problem/1697)|[📂 코드](problems/baekjoon/1697.py) ||
-|백준|2178|[미로 탐색](https://www.acmicpc.net/problem/2178)|[📂 코드](problems/baekjoon/2178.py) ||
-|백준|2206|[미로 탐색](https://www.acmicpc.net/problem/2206)|[📂 코드](problems/baekjoon/2206.py) ||
-
-
----
-
-## 🎯 2. 완전 탐색 & 백트래킹
-| 플랫폼 | 문제 번호 | 문제 이름 | 풀이 코드 | 풀이 과정 |
-|--------|---------|----------|------------|------------|
-
+## 🚀 문제 정리
+| 플랫폼 | 문제 번호 | 문제 이름 | 분류 | 풀이 코드 | 풀이 과정 |
+|--------|---------|----------|------|------------|------------|
+| 백준 | 1012 | [유기농 배추](https://www.acmicpc.net/problem/1012) | 그래프 탐색 (BFS/DFS) | [📂 BFS 풀이](problems/baekjoon/1012_bfs.py) / [📂 DFS 풀이](problems/baekjoon/1012_dfs.py) |  |
+| 백준 | 1260 | [DFS와 BFS](https://www.acmicpc.net/problem/1260) | 그래프 탐색 (BFS/DFS) | [📂 코드](problems/baekjoon/1260.py) | |
+| 백준 | 1261 | [알고스팟](https://www.acmicpc.net/problem/1261) | 그래프 탐색 (BFS) | [📂 코드](problems/baekjoon/1261.py) | [📄 풀이 과정](notes/baekjoon/1261.md) |
+| 백준 | 1389 | [케빈 베이컨의 6단계 법칙](https://www.acmicpc.net/problem/1389) | 완전 탐색 | [📂 코드](problems/baekjoon/1389.py) |  |
+| 백준 | 1697 | [숨바꼭질](https://www.acmicpc.net/problem/1697) | 그래프 탐색 (BFS) | [📂 코드](problems/baekjoon/1697.py) | |
+| 백준 | 2178 | [미로 탐색](https://www.acmicpc.net/problem/2178) | 그래프 탐색 (BFS) | [📂 코드](problems/baekjoon/2178.py) |  |
+| 백준 | 2206 | [벽 부수고 이동하기](https://www.acmicpc.net/problem/2206) | 그래프 탐색 (BFS) | [📂 코드](problems/baekjoon/2206.py) |  |
+| 백준 | 2163 | [초콜릿 자르기](https://www.acmicpc.net/problem/2163) | 그리디 & 수학 | [📂 코드](problems/baekjoon/2163.py) |  |
+| 백준 | 2309 | [일곱 난쟁이](https://www.acmicpc.net/problem/2309) | 완전 탐색 & 조합 | [📂 코드](problems/baekjoon/2309.py) | |
 
 ---
 
-## 🏆 3. 동적 계획법 (DP)
-| 플랫폼 | 문제 번호 | 문제 이름 | 풀이 코드 | 풀이 과정 |
-|--------|---------|----------|------------|------------|
-
-
----
-
-## 🛠 4. 구현 & 시뮬레이션
-| 플랫폼 | 문제 번호 | 문제 이름 | 풀이 코드 | 풀이 과정 |
-|--------|---------|----------|------------|------------|
-
-
----
-
-## 🧮 5. 그리디 & 수학 
-| 플랫폼 | 문제 번호 | 문제 이름 | 풀이 코드 | 풀이 과정 |
-|--------|---------|----------|------------|------------|
-|백준|2163|[초콜릿 자르기](https://www.acmicpc.net/problem/2163)|[📂 코드](problems/baekjoon/2163.py)||
-
-
----
 
 ## 📌 기타 학습 자료
 ### 📖 알고리즘 개념 정리
