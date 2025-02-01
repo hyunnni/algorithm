@@ -28,6 +28,10 @@
 ## 🚀 1. 그래프 탐색 (BFS / DFS)
 | 플랫폼 | 문제 번호 | 문제 이름 | 풀이 코드 | 풀이 과정 |
 |--------|---------|----------|------------|------------|
+|백준|1012|[유기농 배추](https://www.acmicpc.net/problem/1012)|[📂 BFS 풀이](baekjoon/1012_bfs) / [📂 DFS 풀이](baekjoon/1012_dfs)||
+|백준|1260|[DFS와 BFS](https://www.acmicpc.net/problem/1260)|[📂 코드](baekjoon/1260)||
+|백준|1261|[알고스팟](https://www.acmicpc.net/problem/1261)|[📂 코드](baekjoon/1261) ||
+|백준|1389|[케빈 베이컨의 6단계 법칙](https://www.acmicpc.net/problem/1389)|[📂 코드](baekjoon/1389) ||
 
 
 ---
