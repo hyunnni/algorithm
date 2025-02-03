@@ -12,6 +12,7 @@
 | 백준 | 1261 | [알고스팟](https://www.acmicpc.net/problem/1261) | 그래프 탐색 (BFS) | [📂 코드](problems/baekjoon/1261.py) | [📄 풀이 과정](notes/baekjoon/1261.md) |
 | 백준 | 1389 | [케빈 베이컨의 6단계 법칙](https://www.acmicpc.net/problem/1389) | 완전 탐색 | [📂 코드](problems/baekjoon/1389.py) |  |
 | 백준 | 1697 | [숨바꼭질](https://www.acmicpc.net/problem/1697) | 그래프 탐색 (BFS) | [📂 코드](problems/baekjoon/1697.py) | |
+| 백준 | 1987 | [알파벳](https://www.acmicpc.net/problem/1987) | 그래프 탐색 (BFS) | [📂 코드](problems/baekjoon/1987.py) | [📄 풀이 과정](notes/baekjoon/1987.md) |
 | 백준 | 2178 | [미로 탐색](https://www.acmicpc.net/problem/2178) | 그래프 탐색 (BFS) | [📂 코드](problems/baekjoon/2178.py) |  |
 | 백준 | 2206 | [벽 부수고 이동하기](https://www.acmicpc.net/problem/2206) | 그래프 탐색 (BFS) | [📂 코드](problems/baekjoon/2206.py) |  |
 | 백준 | 2163 | [초콜릿 자르기](https://www.acmicpc.net/problem/2163) | 그리디 & 수학 | [📂 코드](problems/baekjoon/2163.py) |  |
