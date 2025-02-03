@@ -17,7 +17,8 @@
 | 백준 | 2163 | [초콜릿 자르기](https://www.acmicpc.net/problem/2163) | 그리디 & 수학 | [📂 코드](problems/baekjoon/2163.py) |  |
 | 백준 | 2309 | [일곱 난쟁이](https://www.acmicpc.net/problem/2309) | 완전 탐색 & 정렬 | [📂 코드](problems/baekjoon/2309.cpp) | |
 | 백준 | 2468 | [안전 영역](https://www.acmicpc.net/problem/2468) | 그래프 탐색 (BFS) | [📂 코드](problems/baekjoon/2468.py) | |
-| 백준 | 2587 | [안전 영역](https://www.acmicpc.net/problem/2587) | 수학 & 구현 | [📂 코드](problems/baekjoon/2587.cpp) | |
+| 백준 | 2587 | [대푯값2](https://www.acmicpc.net/problem/2587) | 수학 & 구현 | [📂 코드](problems/baekjoon/2587.cpp) | |
+| 백준 | 4963 | [섬의 개수](https://www.acmicpc.net/problem/4963) | 그래프 탐색 (BFS/DFS) | [📂 코드](problems/baekjoon/4963.py) | |
 
 ---
 
