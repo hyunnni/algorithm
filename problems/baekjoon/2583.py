@@ -9,15 +9,18 @@ area_list = []
 dx = [-1, 1, 0, 0]
 dy = [0, 0, -1, 1]
 
+# 직사각형 칠하기
 for _ in range(K):
     x1, y1, x2, y2 = map(int, sys.stdin.readline().split())
     sx, ex = x1, x2 - 1
-    sy, ey = M - y2, M - y1 - 1
+    sy, ey = M - y2, M - y1 - 1 # 좌표 변환
+
     for y in range(sy, ey + 1):
         for x in range(sx, ex + 1):
-            grid[y][x] = 1
+            grid[y][x] = 1  # 직사각형 표시
 
-def bfs(sx, sy):
+# 영역 넓이 구하기(BFS)
+def count_area(sx, sy):
     area = 1
     visited[sy][sx] = True
     q = deque([(sx, sy)])
@@ -35,11 +38,13 @@ def bfs(sx, sy):
         
     return area
 
+# BFS 실행
 for y in range(M):
     for x in range(N):
-        if grid[y][x] == 0 and not visited[y][x]:
-            area_list.append(bfs(x, y))
+        if grid[y][x] == 0 and not visited[y][x]:   # 새 영역 발견
+            area_list.append(count_area(x, y))  # 넓이 계산
 
+# 출력
 area_list.sort()
 print(len(area_list))
 print(*area_list)
