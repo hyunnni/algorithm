@@ -45,14 +45,14 @@ def bfs():
                     wq.append((nx, ny))
 
         # 2. 고슴도치 이동 (BFS 2)
-        for _ in range(len(sq)):
+        for _ in range(len(sq)):    # 현재 고슴도치 이동
             cx, cy, time = sq.popleft()
 
             for i in range(4):
                 nx, ny = cx + dx[i], cy + dy[i]
 
                 if 0 <= nx < c and  0 <= ny < r:
-                    if grid[ny][nx] == 'D':
+                    if grid[ny][nx] == 'D': # 비버 굴 도착
                         return time + 1
                     
                     if grid[ny][nx] == '.' and not visited[ny][nx]:
