@@ -5,21 +5,21 @@
 ---
 
 ## 🚀 문제 정리
-| 플랫폼 | 문제 번호 | 문제 이름 | 분류 | 풀이 코드 | 풀이 과정 |
+| 구분 | 문제 번호 | 문제 이름 | 분류 | 코드 | 노트 |
 |--------|---------|----------|------|------------|------------|
-| 백준 | 1012 | [유기농 배추](https://www.acmicpc.net/problem/1012) | 그래프 탐색 (BFS/DFS) | [📂(BFS)](problems/baekjoon/1012_bfs.py) / [📂(DFS)](problems/baekjoon/1012_dfs.py) |  |
-| 백준 | 1260 | [DFS와 BFS](https://www.acmicpc.net/problem/1260) | 그래프 탐색 (BFS/DFS) | [📂](problems/baekjoon/1260.py) | |
-| 백준 | 1261 | [알고스팟](https://www.acmicpc.net/problem/1261) | 그래프 탐색 (BFS) | [📂](problems/baekjoon/1261.py) | [📄](notes/baekjoon/1261.md) |
+| 백준 | 1012 | [유기농 배추](https://www.acmicpc.net/problem/1012) | 그래프 탐색 | [📂](problems/baekjoon/1012_bfs.py) / [📂](problems/baekjoon/1012_dfs.py) |  |
+| 백준 | 1260 | [DFS와 BFS](https://www.acmicpc.net/problem/1260) | 그래프 탐색 | [📂](problems/baekjoon/1260.py) | |
+| 백준 | 1261 | [알고스팟](https://www.acmicpc.net/problem/1261) | 그래프 탐색 | [📂](problems/baekjoon/1261.py) | [📄](notes/baekjoon/1261.md) |
 | 백준 | 1389 | [케빈 베이컨의 6단계 법칙](https://www.acmicpc.net/problem/1389) | 완전 탐색 | [📂](problems/baekjoon/1389.py) |  |
-| 백준 | 1697 | [숨바꼭질](https://www.acmicpc.net/problem/1697) | 그래프 탐색 (BFS) | [📂](problems/baekjoon/1697.py) | |
-| 백준 | 1987 | [알파벳](https://www.acmicpc.net/problem/1987) | 그래프 탐색 (BFS) | [📂](problems/baekjoon/1987.py) | [📄](notes/baekjoon/1987.md) |
-| 백준 | 2178 | [미로 탐색](https://www.acmicpc.net/problem/2178) | 그래프 탐색 (BFS) | [📂](problems/baekjoon/2178.py) |  |
-| 백준 | 2206 | [벽 부수고 이동하기](https://www.acmicpc.net/problem/2206) | 그래프 탐색 (BFS) | [📂](problems/baekjoon/2206.py) |  |
+| 백준 | 1697 | [숨바꼭질](https://www.acmicpc.net/problem/1697) | 그래프 탐색 | [📂](problems/baekjoon/1697.py) | |
+| 백준 | 1987 | [알파벳](https://www.acmicpc.net/problem/1987) | 그래프 탐색 | [📂](problems/baekjoon/1987.py) | [📄](notes/baekjoon/1987.md) |
+| 백준 | 2178 | [미로 탐색](https://www.acmicpc.net/problem/2178) | 그래프 탐색 | [📂](problems/baekjoon/2178.py) |  |
+| 백준 | 2206 | [벽 부수고 이동하기](https://www.acmicpc.net/problem/2206) | 그래프 탐색 | [📂](problems/baekjoon/2206.py) |  |
 | 백준 | 2163 | [초콜릿 자르기](https://www.acmicpc.net/problem/2163) | 그리디 & 수학 | [📂](problems/baekjoon/2163.py) |  |
 | 백준 | 2309 | [일곱 난쟁이](https://www.acmicpc.net/problem/2309) | 완전 탐색 & 정렬 | [📂](problems/baekjoon/2309.cpp) | |
-| 백준 | 2468 | [안전 영역](https://www.acmicpc.net/problem/2468) | 그래프 탐색 (BFS) | [📂](problems/baekjoon/2468.py) | |
+| 백준 | 2468 | [안전 영역](https://www.acmicpc.net/problem/2468) | 그래프 탐색 | [📂](problems/baekjoon/2468.py) | |
 | 백준 | 2587 | [대푯값2](https://www.acmicpc.net/problem/2587) | 수학 & 구현 | [📂](problems/baekjoon/2587.cpp) | |
-| 백준 | 3055 | [탈출](https://www.acmicpc.net/problem/3055) | 그래프 탐색 (BFS) | [📂](problems/baekjoon/3055.py) | [📄](notes/baekjoon/3055.md) |
+| 백준 | 3055 | [탈출](https://www.acmicpc.net/problem/3055) | 그래프 탐색 | [📂](problems/baekjoon/3055.py) | [📄](notes/baekjoon/3055.md) |
 | 백준 | 4963 | [섬의 개수](https://www.acmicpc.net/problem/4963) | 그래프 탐색 (BFS/DFS) | [📂](problems/baekjoon/4963.py) | |
 
 ---
