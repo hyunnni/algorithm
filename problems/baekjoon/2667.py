@@ -1,37 +1,38 @@
 import sys
+from collections import deque
 
-# 입력 처리
-map_list = []
-result_list = []
-n = int(input())
-for _ in range(n):
-    map_list.append(list(map(int, sys.stdin.readline().strip())))
+N = int(input())
+grid = [list(map(int, sys.stdin.readline().strip()))for _ in range(N)]
+visited = [[False]*N for _ in range(N)]
 
-# DFS 함수 정의
-def dfs(x, y):
-    map_list[y][x] = 0  # 방문 처리
-    cnt = 1 # 처리 집 카운트 
+dx = [-1, 1, 0, 0]
+dy = [0, 0, -1, 1]
+complex_list = []
 
-    dx = [-1, 1, 0, 0]
-    dy = [0, 0, -1, 1]
+def bfs(sx, sy):
+    count = 1
+    visited[sy][sx] = True
+    q = deque([(sx, sy)])
 
-    for i in range(4):
-        nx = x + dx[i]
-        ny = y + dy[i]
-
-        if 0<= nx < n and 0<= ny < n and map_list[ny][nx] == 1:
-            cnt += dfs(nx, ny)  # 인접한 집 카운트 누적
+    while q:
+        cx, cy = q.popleft()
     
-    return cnt
+        for i in range(4):
+            nx, ny = cx + dx[i], cy + dy[i]
 
-# 모든 칸 순회하며 DFS 호출
-for y in range(n):
-    for x in range(n):
-        if map_list[y][x] == 1: # 방문하지 않은 단지 발견
-            result_list.append(dfs(x,y))    # 단지에 속하는 집의 수 추가 
-            
-# 결과 출력 
-result_list.sort()
-print(len(result_list)) # 총 단지 수 출력
-for result in result_list:
-    print(result)   # 각 단지의 크기 출력 
+            if 0 <= nx < N and 0 <= ny < N:
+                if not visited[ny][nx] and grid[ny][nx] == 1:
+                    q.append((nx, ny))
+                    visited[ny][nx] = True
+                    count += 1
+
+    return count
+
+for y in range(N):
+    for x in range(N):
+        if not visited[y][x] and grid[y][x] == 1:
+            complex_list.append(bfs(x, y))
+
+complex_list.sort()
+print(len(complex_list))
+print(*complex_list, sep='\n')
