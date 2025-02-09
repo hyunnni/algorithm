@@ -3,7 +3,7 @@ from collections import deque
 
 def bfs(grid, sx, sy):
     q = deque([(sx, sy)])
-    grid[sy][sx] = 0
+    grid[sy][sx] = 0    # 방문 체크 
 
     while q:
         cx, cy = q.popleft()
@@ -11,7 +11,7 @@ def bfs(grid, sx, sy):
             nx, ny = cx + dx[i], cy + dy[i]
 
             if 0 <= nx < M and 0 <= ny < N and grid[ny][nx] == 1:
-                grid[ny][nx] = 0
+                grid[ny][nx] = 0    # 방문 체크 
                 q.append((nx, ny))
                 
 T = int(input())
@@ -22,12 +22,15 @@ for _ in range(T):
     M, N, K = map(int,sys.stdin.readline().split())
     grid = [[0]*M for _ in range(N)]
     cnt = 0
+
     for _ in range(K):
         x, y = map(int, sys.stdin.readline().split())
         grid[y][x] = 1
+
     for y in range(N):
         for x in range(M):
             if grid[y][x] == 1:
-                cnt += 1
+                cnt += 1    # 새 배추 구역 발견
                 bfs(grid, x, y)
+
     print(cnt)
