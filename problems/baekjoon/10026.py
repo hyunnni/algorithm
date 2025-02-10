@@ -23,6 +23,7 @@ def bfs(sx, sy):
                     visited[ny][nx] = True
                     q.append((nx ,ny, color))
 
+# 일반 BFS 실행
 visited = [[False]*N for _ in range(N)]
 for y in range(N):
     for x in range(N):
@@ -30,11 +31,13 @@ for y in range(N):
             bfs(x, y)
             ncb += 1
 
+# 적록색약 실행 위해 변환
 for y in range(N):
     for x in range(N):
         if grid[y][x] == 'R':
             grid[y][x] = 'G'
 
+# 적록색약 BFS 실행
 visited = [[False]*N for _ in range(N)]
 for y in range(N):
     for x in range(N):
