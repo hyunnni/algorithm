@@ -22,7 +22,7 @@
 | BOJ | 2587 | [대푯값2](https://www.acmicpc.net/problem/2587) | 수학 & 구현 | [📂](problems/baekjoon/2587.cpp) | |
 | BOJ | 3055 | [탈출](https://www.acmicpc.net/problem/3055) | 그래프 탐색 | [📂](problems/baekjoon/3055.py) | [📄](notes/baekjoon/3055.md) |
 | BOJ | 4963 | [섬의 개수](https://www.acmicpc.net/problem/4963) | 그래프 탐색 | [📂](problems/baekjoon/4963.py) | |
-| BOJ | 7569 | [토마토](https://www.acmicpc.net/problem/7569) | 그래프 탐색 | [📂](problems/baekjoon/7569.py) | |
+| BOJ | 7569 | [토마토](https://www.acmicpc.net/problem/7569) | 그래프 탐색 | [📂](problems/baekjoon/7569.py) | [📄](notes/baekjoon/7569.md) |
 | BOJ | 10026 | [적록색약](https://www.acmicpc.net/problem/10026) | 그래프 탐색 | [📂](problems/baekjoon/10026.py) | |
 ---
 
