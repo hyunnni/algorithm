@@ -13,36 +13,43 @@ for _ in range(t):
     def bfs():
         fireq = deque([])
         sq = deque([])
+        time = 0
 
+        # 초기 위치 탐색        
         for y in range(h):
             for x in range(w):
                 if building[y][x] == '@':
                     sx, sy = x, y
-                    sq.append((sx, sy, 0))
+                    sq.append((sx, sy))  # 사람 위치 추가
                 elif building[y][x] == '*':
-                    fireq.append((x, y, 0))
+                    fireq.append((x, y)) # 불 위치 추가
 
-        while sq:
+        # 불, 사람 번갈아가며 BFS 실행
+        while sq:   # 사람(`sq`)이 없으면 더 진행할 필요 없음
+            time += 1
+            # 🔥 불 먼저 확산
             for _ in range(len(fireq)):
-                fx, fy, time = fireq.popleft()
+                fx, fy = fireq.popleft()
                 for i in range(4):
                     nfx, nfy = fx + dx[i], fy + dy[i]
                     if 0 <= nfx < w and 0 <= nfy < h and building[nfy][nfx] == '.':
-                        building[nfy][nfx] = '*'
-                        fireq.append((nfx, nfy, time + 1))
+                        building[nfy][nfx] = '*'    # 불 번짐 표시
+                        fireq.append((nfx, nfy))
 
+            # 🕺 상근이 이동
             for _ in range(len(sq)):
-                sx, sy, time = sq.popleft()
+                sx, sy = sq.popleft()
 
+                # 탈출 조건 : 가장자리 도달
                 if sx == 0 or sx == w-1 or sy == 0 or sy == h-1:
-                    print(time + 1)
+                    print(time)
                     return
 
                 for i in range(4):
                     nsx, nsy = sx + dx[i], sy + dy[i]
                     if 0 <= nsx < w and 0 <= nsy < h and building[nsy][nsx] == '.':
-                        building[nsy][nsx] = '@'
-                        sq.append((nsx, nsy, time + 1))
+                        building[nsy][nsx] = '@'    # 사람 이동 표시 (불 구분 위해)
+                        sq.append((nsx, nsy))
 
         print("IMPOSSIBLE")
 
