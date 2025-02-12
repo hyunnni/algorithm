@@ -23,6 +23,7 @@
 | BOJ | 3055 | [탈출](https://www.acmicpc.net/problem/3055) | 그래프 탐색 | [📂](problems/baekjoon/3055.py) | [📄](notes/baekjoon/3055.md) |
 | BOJ | 4963 | [섬의 개수](https://www.acmicpc.net/problem/4963) | 그래프 탐색 | [📂](problems/baekjoon/4963.py) | |
 | BOJ | 5427 | [불](https://www.acmicpc.net/problem/5427) | 그래프 탐색 | [📂](problems/baekjoon/5427.py) | |
+| BOJ | 7562 | [나이트의 이동](https://www.acmicpc.net/problem/7562) | 그래프 탐색 | [📂](problems/baekjoon/7562.py) | |
 | BOJ | 7569 | [토마토](https://www.acmicpc.net/problem/7569) | 그래프 탐색 | [📂](problems/baekjoon/7569.py) | [📄](notes/baekjoon/7569.md) |
 | BOJ | 10026 | [적록색약](https://www.acmicpc.net/problem/10026) | 그래프 탐색 | [📂](problems/baekjoon/10026.py) | |
 ---
