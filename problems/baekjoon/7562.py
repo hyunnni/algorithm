@@ -4,26 +4,26 @@ from collections import deque
 dx = [2, 2, 1, 1, -1, -1, -2, -2]
 dy = [1, -1, 2, -2, 2, -2, 1, -1]
 
-def count_move(sx, sy, ex, ey, I):
-    if sx == ex and sy == ey:
+def get_min_knight_moves(start_x: int, start_y: int, end_x: int, end_y: int, board_size: int) -> int:
+    if start_x == end_x and start_y == end_y:
         return 0
 
-    visited = [[False] * I for _ in range(I)]
-    visited[sy][sx] = True
-    q = deque([(sx, sy, 0)])
+    visited = [[False] * board_size for _ in range(board_size)]
+    visited[start_y][start_x] = True
+    q = deque([(start_x, start_y, 0)])
 
     while q:
-        cx, cy, move = q.popleft()
+        curr_x, curr_y, moves = q.popleft()
         
         for i in range(8):
-            nx, ny = cx + dx[i], cy + dy[i]
+            next_x, next_y = curr_x + dx[i], curr_y + dy[i]
             
-            if 0 <= nx < I and 0 <= ny < I and not visited[ny][nx]:
-                if nx == ex and ny == ey:
-                    return move + 1
+            if 0 <= next_x < board_size and 0 <= next_y < board_size and not visited[next_y][next_x]:
+                if next_x == end_x and next_y == end_y:
+                    return moves + 1
                 
-                visited[ny][nx] = True
-                q.append((nx, ny, move + 1))
+                visited[next_y][next_x] = True
+                q.append((next_x, next_y, moves + 1))
 
     return -1
 
@@ -33,4 +33,4 @@ for _ in range(T):
     sx, sy = map(int, sys.stdin.readline().split())
     ex, ey = map(int, sys.stdin.readline().split())
 
-    print(count_move(sx, sy, ex, ey, I))
+    print(get_min_knight_moves(sx, sy, ex, ey, I))

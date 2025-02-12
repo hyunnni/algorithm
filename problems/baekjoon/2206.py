@@ -1,46 +1,40 @@
 import sys
 from collections import deque
 
-# 입력 처리
-n, m = map(int, sys.stdin.readline().split())
-map_list = [list(map(int, sys.stdin.readline().strip())) for _ in range(n)]
+N, M = map(int, sys.stdin.readline().split())
+grid = [list(map(int, list(sys.stdin.readline().strip()))) for _ in range(N)]
 
-# BFS 함수 정의
+dx = [0, 0, -1, 1]
+dy = [-1, 1, 0, 0]
+
 def bfs():
-    # 방문 배열: visited[y][x][0] -> 벽을 뚫지 않은 상태, visited[y][x][1] -> 벽을 뚫은 상태
-    visited = [[[False] * 2 for _ in range(m)] for _ in range(n)]
-    queue = deque([(0, 0, 1, 0)])  # (x, y, 거리, 벽을 뚫었는지 여부)
-    visited[0][0][0] = True  # 시작 지점 방문 처리 (벽을 뚫지 않은 상태)
+    # ✅ dist 배열을 3차원으로 변경하여 벽 부순 여부를 따로 저장
+    dist = [[[0] * 2 for _ in range(M)] for _ in range(N)]
+    dist[0][0][0] = 1  # 시작 위치 설정 (벽을 부수지 않은 상태)
 
-    # 이동 방향
-    dx = [-1, 1, 0, 0]
-    dy = [0, 0, -1, 1]
+    q = deque([(0, 0, 0)])  # ✅ (x, y, 벽 부순 여부) 추가
 
-    while queue:
-        curx, cury, dist, wall_break = queue.popleft()
+    while q:
+        cx, cy, broken = q.popleft()
 
-        # 도착지점에 도달한 경우 거리 반환
-        if curx == m - 1 and cury == n - 1:
-            return dist
+        # ✅ 목표 지점 도착하면 거리 반환
+        if cx == M - 1 and cy == N - 1:
+            return dist[cy][cx][broken]
 
-        # 상하좌우 이동
         for i in range(4):
-            nx = curx + dx[i]
-            ny = cury + dy[i]
+            nx, ny = cx + dx[i], cy + dy[i]
 
-            # 유효한 좌표인지 확인
-            if 0 <= nx < m and 0 <= ny < n:
-                # 벽이 아닌 경우
-                if map_list[ny][nx] == 0 and not visited[ny][nx][wall_break]:
-                    visited[ny][nx][wall_break] = True
-                    queue.append((nx, ny, dist + 1, wall_break))
+            if 0 <= nx < M and 0 <= ny < N:
+                # 1️⃣ 벽이 아닌 경우 → 그냥 이동
+                if grid[ny][nx] == 0 and dist[ny][nx][broken] == 0:
+                    dist[ny][nx][broken] = dist[cy][cx][broken] + 1
+                    q.append((nx, ny, broken))
 
-                # 벽인 경우, 벽을 뚫을 수 있다면
-                elif map_list[ny][nx] == 1 and wall_break == 0 and not visited[ny][nx][1]:
-                    visited[ny][nx][1] = True
-                    queue.append((nx, ny, dist + 1, 1))
+                # 2️⃣ 벽인 경우 → 벽을 한 번만 부술 수 있음
+                elif grid[ny][nx] == 1 and broken == 0:  # ✅ 아직 벽을 부수지 않은 상태라면
+                    dist[ny][nx][1] = dist[cy][cx][broken] + 1  # ✅ 벽을 부순 상태로 이동
+                    q.append((nx, ny, 1))
 
-    return -1  # 도착할 수 없는 경우 
+    return -1  # ❌ 최단 경로가 없는 경우
 
-# 결과 출력
 print(bfs())
