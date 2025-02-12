@@ -1,8 +1,9 @@
 import sys
 from collections import deque
 
-N, M = map(int, sys.stdin.readline().split())
-grid = [list(map(int, list(sys.stdin.readline().strip()))) for _ in range(N)]
+input = sys.stdin.readline
+N, M = map(int, input().split())
+grid = [list(map(int, input().strip())) for _ in range(N)]
 
 dx = [0, 0, -1, 1]
 dy = [-1, 1, 0, 0]
