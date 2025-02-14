@@ -8,6 +8,7 @@
 | 구분 | 문제 번호 | 문제 이름 | 분류 | 코드 | 노트 |
 |--------|---------|----------|------|------------|------------|
 | BOJ | 1012 | [유기농 배추](https://www.acmicpc.net/problem/1012) | 그래프 탐색 | [📂](problems/baekjoon/1012_bfs.py) / [📂](problems/baekjoon/1012_dfs.py) |  |
+| BOJ | 1167 | [트리의 지름](https://www.acmicpc.net/problem/1167) | 그래프 탐색 | [📂](problems/baekjoon/1167.py) | |
 | BOJ | 1260 | [DFS와 BFS](https://www.acmicpc.net/problem/1260) | 그래프 탐색 | [📂](problems/baekjoon/1260.py) | |
 | BOJ | 1261 | [알고스팟](https://www.acmicpc.net/problem/1261) | 그래프 탐색 | [📂](problems/baekjoon/1261.py) | [📄](notes/baekjoon/1261.md) |
 | BOJ | 1389 | [케빈 베이컨의 6단계 법칙](https://www.acmicpc.net/problem/1389) | 완전 탐색 | [📂](problems/baekjoon/1389.py) |  |
