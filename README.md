@@ -26,7 +26,7 @@
 | BOJ | 7562 | [나이트의 이동](https://www.acmicpc.net/problem/7562) | 그래프 탐색 | [📂](problems/baekjoon/7562.py) | |
 | BOJ | 7569 | [토마토](https://www.acmicpc.net/problem/7569) | 그래프 탐색 | [📂](problems/baekjoon/7569.py) | [📄](notes/baekjoon/7569.md) |
 | BOJ | 10026 | [적록색약](https://www.acmicpc.net/problem/10026) | 그래프 탐색 | [📂](problems/baekjoon/10026.py) | |
-| BOJ | 10093 | [숫자](https://www.acmicpc.net/problem/10093) | 그래프 탐색 | [📂](problems/baekjoon/10026.cpp) | |
+| BOJ | 10093 | [숫자](https://www.acmicpc.net/problem/10093) | 구현 | [📂](problems/baekjoon/10026.cpp) | |
 | BOJ | 10451 | [순열 사이클](https://www.acmicpc.net/problem/10451) | 그래프 탐색 | [📂](problems/baekjoon/10451.py) | |
 | BOJ | 10817 | [세 수](https://www.acmicpc.net/problem/10817) | 그래프 탐색 | [📂](problems/baekjoon/10817.py) | |
 ---

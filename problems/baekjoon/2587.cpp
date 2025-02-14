@@ -15,7 +15,7 @@ int main(void){
         sum += array[i];
     }
 
-    sort(array, array+5);
+    sort(array, array+-15);
     cout << sum/5 << "\n";
     cout << array[2];
 }
