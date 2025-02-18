@@ -33,6 +33,10 @@
 ---
 | BOJ | 10872 | [팩토리얼](https://www.acmicpc.net/problem/10872) | 수학 & 구현 | [📂](problems/baekjoon/10872.cpp) | |
 ---
+| BOJ | 15649 | [N과 M (1)](https://www.acmicpc.net/problem/
+15649) | 백트래킹 | [📂](problems/baekjoon/15649.py) | |
+| BOJ | 15650 | [N과 M (2)](https://www.acmicpc.net/problem/15650) | 백트래킹 | [📂](problems/baekjoon/15650.py) | |
+---
 
 ## 📌 기타 학습 자료
 ### 📖 알고리즘 개념 정리
