@@ -80,21 +80,21 @@ arr = [1, 2, 3]
 
 ### **백트래킹 호출 트리**
 ```
-backtrack(0, 0)
- ├─ backtrack(1, 1)   # 1을 선택
- │  ├─ backtrack(2, 3)   # 2를 선택 → S 만족!
+backtrack(0, 0)   # {}
+ ├─ backtrack(1, 1)   # {1}
+ │  ├─ backtrack(2, 3)   # {1, 2} → S 만족!
  │  │  ├─ backtrack(3, X)  # 종료
  │  │  ├─ backtrack(3, X)  # 종료
- │  ├─ backtrack(2, 1)   # 2를 선택 안 함
- │     ├─ backtrack(3, 4)  # 3을 선택 → 종료
- │     ├─ backtrack(3, 1)  # 3을 선택 안 함 → 종료
- ├─ backtrack(1, 0)   # 1을 선택 안 함
-    ├─ backtrack(2, 2)   # 2를 선택
-    │  ├─ backtrack(3, 5)  # 3을 선택 → 종료
-    │  ├─ backtrack(3, 2)  # 3을 선택 안 함 → 종료
-    ├─ backtrack(2, 0)   # 2를 선택 안 함
-       ├─ backtrack(3, 3)  # 3을 선택 → S 만족!
-       ├─ backtrack(3, 0)  # 3을 선택 안 함 → 종료
+ │  ├─ backtrack(2, 1)   # {1} (2 선택 안 함)
+ │     ├─ backtrack(3, 4)  # {1, 3} → 종료
+ │     ├─ backtrack(3, 1)  # {1} → 종료
+ ├─ backtrack(1, 0)   # {} (1 선택 안 함)
+    ├─ backtrack(2, 2)   # {2}
+    │  ├─ backtrack(3, 5)  # {2, 3} → 종료
+    │  ├─ backtrack(3, 2)  # {2} → 종료
+    ├─ backtrack(2, 0)   # {} (2 선택 안 함)
+       ├─ backtrack(3, 3)  # {3} → S 만족!
+       ├─ backtrack(3, 0)  # {} → 종료
 ```
 
 ---
