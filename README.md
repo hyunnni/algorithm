@@ -31,18 +31,16 @@
 | BOJ | 10093 | [숫자](https://www.acmicpc.net/problem/10093) | 구현 | [📂](problems/baekjoon/10026.cpp) | |
 | BOJ | 10451 | [순열 사이클](https://www.acmicpc.net/problem/10451) | 그래프 탐색 | [📂](problems/baekjoon/10451.py) | |
 | BOJ | 10817 | [세 수](https://www.acmicpc.net/problem/10817) | 그래프 탐색 | [📂](problems/baekjoon/10817.py) | |
----
 | BOJ | 10872 | [팩토리얼](https://www.acmicpc.net/problem/10872) | 수학 & 구현 | [📂](problems/baekjoon/10872.cpp) | |
----
-| BOJ | 15649 | [N과 M (1)](https://www.acmicpc.net/problem/
-15649) | 백트래킹 | [📂](problems/baekjoon/15649.py) | |
+| BOJ | 15649 | [N과 M (1)](https://www.acmicpc.net/problem/15649)     | 백트래킹 | [📂](problems/baekjoon/15649.py) | |
 | BOJ | 15650 | [N과 M (2)](https://www.acmicpc.net/problem/15650) | 백트래킹 | [📂](problems/baekjoon/15650.py) | |
 ---
 
 ## 📌 기타 학습 자료
 ### 📖 알고리즘 개념 정리
-- [BFS 개념 정리](notes/algorithms/bfs.md)
-- [DFS 개념 정리](notes/algorithms/dfs.md)
+- [BFS](notes/algorithms/bfs.md)
+- [DFS](notes/algorithms/dfs.md)
+- [Backtracking](notes/algorithms/backtracking.md)
 - [Python 입력 처리 가이드](notes/coding-guides/python-input-guide.md)
 
 ---
