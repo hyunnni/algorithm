@@ -22,6 +22,7 @@
 | BOJ | 2468 | [안전 영역](https://www.acmicpc.net/problem/2468) | 그래프 탐색 | [📂](problems/baekjoon/2468.py) | |
 | BOJ | 2583 | [영역 구하기](https://www.acmicpc.net/problem/2583) | 그래프 탐색 | [📂](problems/baekjoon/2583.py) | |
 | BOJ | 2587 | [대푯값2](https://www.acmicpc.net/problem/2587) | 수학 & 구현 | [📂](problems/baekjoon/2587.cpp) | |
+| BOJ | 2644 | [촌수계산](https://www.acmicpc.net/problem/2644) | 그래프 탐색 | [📂](problems/baekjoon/2644.py) | |
 | BOJ | 3055 | [탈출](https://www.acmicpc.net/problem/3055) | 그래프 탐색 | [📂](problems/baekjoon/3055.py) | [📄](notes/baekjoon/3055.md) |
 | BOJ | 4963 | [섬의 개수](https://www.acmicpc.net/problem/4963) | 그래프 탐색 | [📂](problems/baekjoon/4963.py) | |
 | BOJ | 5427 | [불](https://www.acmicpc.net/problem/5427) | 그래프 탐색 | [📂](problems/baekjoon/5427.py) | |
