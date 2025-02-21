@@ -10,8 +10,8 @@ m = int(input())
 flist = [[] for _ in range(n + 1)]
 for _ in range(m):
     x, y = map(int, input().split())
-    flist[x].append(y)
-    flist[y].append(x)
+    flist[x].append(y)  
+    flist[y].append(x)  # 양방향
 
 def bfs(start, target):
     q = deque([(start, 0)])
@@ -21,7 +21,7 @@ def bfs(start, target):
     while q:
         cur, count = q.popleft()
 
-        if cur == target:
+        if cur == target:   # 목표 노드
             return count
 
         for next_person in flist[cur]:
@@ -29,6 +29,6 @@ def bfs(start, target):
                 visited[next_person] = True
                 q.append((next_person, count + 1))
 
-    return -1
+    return -1   # 계산 불가가
 
 print(bfs(a, b))
