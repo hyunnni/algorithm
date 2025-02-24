@@ -17,14 +17,16 @@ def bfs(m, n, box):
     empty_area = 0
     ripe_count = 0
 
+    # 익은 토마토, 빈 공간 수 카운트 
     for y in range(n):
         for x in range(m):
             if box[y][x] == 1:
-                q.append((x, y))
+                q.append((x, y))    # 익은 토마토 큐에 추가
                 ripe_count += 1
             elif box[y][x] == -1:
                 empty_area += 1
 
+    # 저장될 때부터 모두 익어있는 상태
     if ripe_count == total_tomatoes - empty_area:
         return 0
 
@@ -36,7 +38,7 @@ def bfs(m, n, box):
             for i in range(4):
                 nx, ny = cx + dx[i], cy + dy[i]
 
-                if 0 <= nx < m and 0 <= ny < n and box[ny][nx] == 0:
+                if 0 <= nx < m and 0 <= ny < n and box[ny][nx] == 0:    # 인접 토마토
                     box[ny][nx] = 1
                     ripe_count += 1
                     q.append((nx, ny))
