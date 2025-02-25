@@ -35,6 +35,7 @@
 | BOJ | 10451 | [순열 사이클](https://www.acmicpc.net/problem/10451) | 그래프 탐색 | [📂](problems/baekjoon/10451.py) | |
 | BOJ | 10817 | [세 수](https://www.acmicpc.net/problem/10817) | 그래프 탐색 | [📂](problems/baekjoon/10817.py) | |
 | BOJ | 10872 | [팩토리얼](https://www.acmicpc.net/problem/10872) | 수학 & 구현 | [📂](problems/baekjoon/10872.cpp) | |
+| BOJ | 11724 | [연결 요소의 개수](https://www.acmicpc.net/problem/11724) | 그래프 탐색 | [📂](problems/baekjoon/11724.py) | |
 | BOJ | 15649 | [N과 M (1)](https://www.acmicpc.net/problem/15649)     | 백트래킹 | [📂](problems/baekjoon/15649.py) | |
 | BOJ | 15650 | [N과 M (2)](https://www.acmicpc.net/problem/15650) | 백트래킹 | [📂](problems/baekjoon/15650.py) | |
 ---
