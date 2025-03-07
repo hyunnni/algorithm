@@ -12,18 +12,19 @@ def bfs(x, y):
     visited = [[-1] * m for _ in range(n)]
     queue = deque([(x, y)])
     visited[x][y] = 0
-    max_dist = 0
+    max_dist = 0    #가장 먼 거리
     
     while queue:
         x, y = queue.popleft()
         
+        # 최대 거리 비교
         max_dist = max(max_dist, visited[x][y])
         
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
             
-            if 0 <= nx < n and 0 <= ny < m and grid[nx][ny] == 'L' and visited[nx][ny] == -1:
+            if 0 <= nx < n and 0 <= ny < m and grid[nx][ny] == 'L' and visited[nx][ny] == -1:   # 미방문 육지
                 visited[nx][ny] = visited[x][y] + 1
                 queue.append((nx, ny))
                 
@@ -33,6 +34,6 @@ result = 0
 for i in range(n):
     for j in range(m):
         if grid[i][j] == 'L':
-            result = max(result, bfs(i, j))
+            result = max(result, bfs(i, j)) # 최장 거리 중 최댓값
 
 print(result)
